@@ -8,6 +8,7 @@ import (
 
 type Authoruzation interface {
 	CreateUser(user restapi.User) (int, error)
+	GetUser(username, password string) (restapi.User, error)
 }
 
 type TodoList interface{}
