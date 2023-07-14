@@ -13,6 +13,7 @@ type Authoruzation interface {
 
 type TodoList interface {
 	Create(userId int, list restapi.TodoList) (int, error)
+	GetAll(userId int) ([]restapi.TodoList, error)
 }
 
 type TodoItem interface{}
