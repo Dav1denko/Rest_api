@@ -19,7 +19,9 @@ type TodoList interface {
 	Update(userId, listId int, input restapi.UpdateListInput) error
 }
 
-type TodoItem interface{}
+type TodoItem interface {
+	Create(userId, listId int, item restapi.TodoItem) (int, error)
+}
 
 type Service struct {
 	Authoruzation
