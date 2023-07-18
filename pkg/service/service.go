@@ -22,6 +22,7 @@ type TodoList interface {
 type TodoItem interface {
 	Create(userId, listId int, item restapi.TodoItem) (int, error)
 	GetAll(userId, listId int) ([]restapi.TodoItem, error)
+	GetById(userId, itemId int) (restapi.TodoItem, error)
 }
 
 type Service struct {
